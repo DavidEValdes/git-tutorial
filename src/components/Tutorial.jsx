@@ -5,6 +5,11 @@ import Repositories from '../sections/Repositories';
 import Commits from '../sections/Commits';
 import Branches from '../sections/Branches'; 
 import PullRequests from '../sections/PullRequests';
+import Collaboration from '../sections/Collaboration';
+import Issues from '../sections/Issues';
+import Advanced from '../sections/Advanced';
+import FAQ from '../sections/FAQ';
+import Glossary from '../sections/Glossary';
 
 const ContentBlock = ({ children }) => (
   <div className="p-6 bg-white rounded-lg shadow">{children}</div>
@@ -116,6 +121,16 @@ const Tutorial = () => {
         return <Branches />;
       case 'pullRequests':
         return <PullRequests />;
+      case 'collaboration':
+        return <Collaboration />;
+      case 'issues':
+        return <Issues />;
+      case 'advanced':
+        return <Advanced />;
+      case 'faq':
+        return <FAQ />;
+      case 'glossary':
+        return <Glossary />;
       default:
         return (
           <div className="space-y-6">
