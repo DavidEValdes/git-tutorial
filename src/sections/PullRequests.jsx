@@ -1,9 +1,5 @@
 import React from 'react';
 
-const CodeBlock = ({ children }) => (
-  <code className="block p-4 bg-gray-100 rounded font-mono text-sm">{children}</code>
-);
-
 const PullRequests = () => (
   <div className="space-y-8">
     <div>
@@ -20,9 +16,9 @@ const PullRequests = () => (
           <h3 className="text-xl font-semibold mb-3">Basic Steps</h3>
           <ol className="list-decimal pl-5 space-y-2">
             <li>Push your branch to GitHub:
-              <CodeBlock>
+              <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
                 git push origin feature-branch
-              </CodeBlock>
+              </div>
             </li>
             <li>Visit your repository on GitHub</li>
             <li>Click "Compare & pull request"</li>
@@ -41,26 +37,26 @@ const PullRequests = () => (
 
         <div className="bg-blue-50 p-6 rounded-lg">
           <h3 className="text-xl font-semibold mb-3">PR Description Template</h3>
-          <CodeBlock>
-            ## Changes Made
-            - Detailed list of changes
-            - Impact on existing functionality
-            
-            ## Testing Done
-            - Tests added/modified
-            - Manual testing steps
-            
-            ## Screenshots
-            (if applicable)
-            
-            ## Related Issues
-            Closes #123
-            
-            ## Checklist
-            - [ ] Tests added
-            - [ ] Documentation updated
+          <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
+            ## Changes Made{'\n'}
+            - Detailed list of changes{'\n'}
+            - Impact on existing functionality{'\n'}
+            {'\n'}
+            ## Testing Done{'\n'}
+            - Tests added/modified{'\n'}
+            - Manual testing steps{'\n'}
+            {'\n'}
+            ## Screenshots{'\n'}
+            (if applicable){'\n'}
+            {'\n'}
+            ## Related Issues{'\n'}
+            Closes #123{'\n'}
+            {'\n'}
+            ## Checklist{'\n'}
+            - [ ] Tests added{'\n'}
+            - [ ] Documentation updated{'\n'}
             - [ ] CI checks pass
-          </CodeBlock>
+          </div>
         </div>
       </div>
     </div>
@@ -111,18 +107,18 @@ const PullRequests = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Updating Pull Requests</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Update your feature branch with main
-              git checkout feature-branch
-              git fetch origin
-              git merge origin/main
-
-              # Push updates
-              git push origin feature-branch
-
-              # Force push if needed (use with caution)
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
+              # Update your feature branch with main{'\n'}
+              git checkout feature-branch{'\n'}
+              git fetch origin{'\n'}
+              git merge origin/main{'\n'}
+              {'\n'}
+              # Push updates{'\n'}
+              git push origin feature-branch{'\n'}
+              {'\n'}
+              # Force push if needed (use with caution){'\n'}
               git push --force-with-lease origin feature-branch
-            </CodeBlock>
+            </div>
           </div>
         </div>
 
@@ -146,23 +142,23 @@ const PullRequests = () => (
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-bold mb-2">Create a merge commit</h3>
             <p className="text-sm">Preserves all commits history</p>
-            <CodeBlock>
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
               git merge --no-ff
-            </CodeBlock>
+            </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-bold mb-2">Squash and merge</h3>
             <p className="text-sm">Combines all commits into one</p>
-            <CodeBlock>
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
               git merge --squash
-            </CodeBlock>
+            </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-bold mb-2">Rebase and merge</h3>
             <p className="text-sm">Creates linear history</p>
-            <CodeBlock>
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
               git rebase main
-            </CodeBlock>
+            </div>
           </div>
         </div>
       </div>

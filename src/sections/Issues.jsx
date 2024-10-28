@@ -1,9 +1,5 @@
 import React from 'react';
 
-const CodeBlock = ({ children }) => (
-  <code className="block p-4 bg-gray-100 rounded font-mono text-sm">{children}</code>
-);
-
 const Issues = () => (
   <div className="space-y-8">
     <div>
@@ -19,38 +15,38 @@ const Issues = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Creating Issue Templates</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <p className="mb-4">Create templates in <code>.github/ISSUE_TEMPLATE/</code> directory:</p>
-            <CodeBlock>
-              name: Bug Report
-              about: Create a report to help us improve
-              title: "[BUG] "
-              labels: bug
-              assignees: ""
-
-              body:
-              - type: markdown
-                attributes:
-                  value: Thanks for taking the time to fill out this bug report!
-
-              - type: input
-                attributes:
-                  label: What version are you using?
-                  required: true
-
-              - type: textarea
-                attributes:
-                  label: Describe the bug
-                  placeholder: A clear description of what the bug is...
-                  required: true
-
-              - type: textarea
-                attributes:
-                  label: Steps to reproduce
-                  value: |
-                    1. Go to '...'
-                    2. Click on '...'
-                    3. See error
-            </CodeBlock>
+            <p className="mb-4">Create templates in <span className="font-mono bg-gray-200 px-2 py-1 rounded">.github/ISSUE_TEMPLATE/</span> directory:</p>
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
+              name: Bug Report{'\n'}
+              about: Create a report to help us improve{'\n'}
+              title: "[BUG] "{'\n'}
+              labels: bug{'\n'}
+              assignees: ""{'\n'}
+              {'\n'}
+              body:{'\n'}
+              - type: markdown{'\n'}
+                attributes:{'\n'}
+                  value: Thanks for taking the time to fill out this bug report!{'\n'}
+              {'\n'}
+              - type: input{'\n'}
+                attributes:{'\n'}
+                  label: What version are you using?{'\n'}
+                  required: true{'\n'}
+              {'\n'}
+              - type: textarea{'\n'}
+                attributes:{'\n'}
+                  label: Describe the bug{'\n'}
+                  placeholder: A clear description of what the bug is...{'\n'}
+                  required: true{'\n'}
+              {'\n'}
+              - type: textarea{'\n'}
+                attributes:{'\n'}
+                  label: Steps to reproduce{'\n'}
+                  value: |{'\n'}
+                    1. Go to '...'{'\n'}
+                    2. Click on '...'{'\n'}
+                    3. See error{'\n'}
+            </div>
           </div>
         </div>
 
@@ -158,15 +154,15 @@ const Issues = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Search Qualifiers</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Common search examples
-              is:issue is:open label:bug             # Open bug issues
-              is:issue author:username               # Issues created by user
-              is:issue assignee:username             # Issues assigned to user
-              is:issue milestone:"Release 1.0"       # Issues in milestone
-              is:issue created:2023-01-01          # Issues created after date
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
+              # Common search examples{'\n'}
+              is:issue is:open label:bug             # Open bug issues{'\n'}
+              is:issue author:username               # Issues created by user{'\n'}
+              is:issue assignee:username             # Issues assigned to user{'\n'}
+              is:issue milestone:"Release 1.0"       # Issues in milestone{'\n'}
+              is:issue created:2023-01-01            # Issues created after date{'\n'}
               is:issue label:enhancement state:open  # Open feature requests
-            </CodeBlock>
+            </div>
           </div>
         </div>
 

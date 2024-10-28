@@ -1,9 +1,5 @@
 import React from 'react';
 
-const CodeBlock = ({ children }) => (
-  <code className="block p-4 bg-gray-100 rounded font-mono text-sm">{children}</code>
-);
-
 const Branches = () => (
   <div className="space-y-8">
     <div>
@@ -19,47 +15,47 @@ const Branches = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Creating and Switching Branches</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # List all branches
-              git branch
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`# List all branches
+git branch
 
-              # Create new branch
-              git branch feature-name
+# Create new branch
+git branch feature-name
 
-              # Switch to branch
-              git checkout feature-name
+# Switch to branch
+git checkout feature-name
 
-              # Create and switch in one command
-              git checkout -b feature-name
+# Create and switch in one command
+git checkout -b feature-name
 
-              # List remote branches
-              git branch -r
+# List remote branches
+git branch -r
 
-              # List all branches (local and remote)
-              git branch -a
-            </CodeBlock>
+# List all branches (local and remote)
+git branch -a`}
+            </div>
           </div>
         </div>
 
         <div>
           <h3 className="text-xl font-semibold mb-3">Branch Management</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Delete local branch
-              git branch -d branch-name
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`# Delete local branch
+git branch -d branch-name
 
-              # Force delete unmerged branch
-              git branch -D branch-name
+# Force delete unmerged branch
+git branch -D branch-name
 
-              # Delete remote branch
-              git push origin --delete branch-name
+# Delete remote branch
+git push origin --delete branch-name
 
-              # Rename branch
-              git branch -m new-name
+# Rename branch
+git branch -m new-name
 
-              # Track remote branch
-              git checkout --track origin/feature-name
-            </CodeBlock>
+# Track remote branch
+git checkout --track origin/feature-name`}
+            </div>
           </div>
         </div>
       </div>
@@ -118,22 +114,22 @@ const Branches = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Merging Branches</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Switch to target branch
-              git checkout main
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`# Switch to target branch
+git checkout main
 
-              # Merge feature branch
-              git merge feature-name
+# Merge feature branch
+git merge feature-name
 
-              # Merge with commit
-              git merge --no-ff feature-name
+# Merge with commit
+git merge --no-ff feature-name
 
-              # Abort merge
-              git merge --abort
+# Abort merge
+git merge --abort
 
-              # Push merged changes
-              git push origin main
-            </CodeBlock>
+# Push merged changes
+git push origin main`}
+            </div>
           </div>
         </div>
 
@@ -143,13 +139,13 @@ const Branches = () => (
             <li>Identify conflicting files</li>
             <li>Open files and locate conflict markers:
               <div className="bg-gray-50 p-4 rounded-lg mt-2">
-                <code className="block font-mono text-sm whitespace-pre">
+                <div className="block font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
                   {`<<<<<<< HEAD
 Your changes
 =======
 Their changes
 >>>>>>> feature-branch`}
-                </code>
+                </div>
               </div>
             </li>
             <li>Choose desired changes</li>
@@ -167,19 +163,19 @@ Their changes
         <div>
           <h3 className="text-xl font-semibold mb-3">Rebasing</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Rebase current branch onto main
-              git rebase main
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`# Rebase current branch onto main
+git rebase main
 
-              # Interactive rebase
-              git rebase -i HEAD~3
+# Interactive rebase
+git rebase -i HEAD~3
 
-              # Continue after resolving conflicts
-              git rebase --continue
+# Continue after resolving conflicts
+git rebase --continue
 
-              # Abort rebase
-              git rebase --abort
-            </CodeBlock>
+# Abort rebase
+git rebase --abort`}
+            </div>
             <div className="mt-4 bg-yellow-50 p-4 rounded">
               <p className="font-bold">⚠️ Warning:</p>
               <p>Never rebase branches that have been pushed to public repositories.</p>
@@ -190,16 +186,16 @@ Their changes
         <div>
           <h3 className="text-xl font-semibold mb-3">Cherry Picking</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Apply specific commit to current branch
-              git cherry-pick commit-hash
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`# Apply specific commit to current branch
+git cherry-pick commit-hash
 
-              # Cherry pick without committing
-              git cherry-pick -n commit-hash
+# Cherry pick without committing
+git cherry-pick -n commit-hash
 
-              # Cherry pick multiple commits
-              git cherry-pick commit1..commit2
-            </CodeBlock>
+# Cherry pick multiple commits
+git cherry-pick commit1..commit2`}
+            </div>
           </div>
         </div>
 

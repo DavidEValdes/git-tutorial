@@ -1,9 +1,5 @@
 import React from 'react';
 
-const CodeBlock = ({ children }) => (
-  <code className="block p-4 bg-gray-100 rounded font-mono text-sm">{children}</code>
-);
-
 const Repositories = () => (
   <div className="space-y-8">
     <div>
@@ -40,28 +36,23 @@ const Repositories = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Via Command Line</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Create a new directory
-              mkdir my-project
-              cd my-project
-
-              # Initialize git repository
-              git init
-
-              # Add README file
-              echo "# My Project"  README.md
-
-              # Make first commit
-              git add README.md
-              git commit -m "Initial commit"
-
-              # Add remote repository
-              git remote add origin https://github.com/username/repo.git
-
-              # Push to GitHub
-              git branch -M main
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
+              # Create a new directory{'\n'}
+              mkdir my-project{'\n'}
+              cd my-project{'\n\n'}
+              # Initialize git repository{'\n'}
+              git init{'\n\n'}
+              # Add README file{'\n'}
+              echo "# My Project"  README.md{'\n\n'}
+              # Make first commit{'\n'}
+              git add README.md{'\n'}
+              git commit -m "Initial commit"{'\n\n'}
+              # Add remote repository{'\n'}
+              git remote add origin https://github.com/username/repo.git{'\n\n'}
+              # Push to GitHub{'\n'}
+              git branch -M main{'\n'}
               git push -u origin main
-            </CodeBlock>
+            </div>
           </div>
         </div>
       </div>
@@ -91,15 +82,15 @@ const Repositories = () => (
               <h4 className="font-bold mb-2">.gitignore</h4>
               <p className="text-gray-600 mb-4">Specifies which files Git should ignore.</p>
               <div className="bg-gray-50 p-4 rounded-lg">
-                <CodeBlock>
-                  # Example .gitignore
-                  node_modules/
-                  .env
-                  .DS_Store
-                  *.log
-                  dist/
+                <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
+                  # Example .gitignore{'\n'}
+                  node_modules/{'\n'}
+                  .env{'\n'}
+                  .DS_Store{'\n'}
+                  *.log{'\n'}
+                  dist/{'\n'}
                   coverage/
-                </CodeBlock>
+                </div>
               </div>
             </div>
           </div>
@@ -155,26 +146,22 @@ const Repositories = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Useful Commands</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Clone repository
-              git clone [url]
-
-              # Update local repository
-              git fetch
-              git pull
-
-              # View repository info
-              git remote -v
-              git branch -a
-              git status
-
-              # Create and switch branches
-              git checkout -b feature-branch
-
-              # Clean up
-              git remote prune origin
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm whitespace-pre">
+              # Clone repository{'\n'}
+              git clone [url]{'\n\n'}
+              # Update local repository{'\n'}
+              git fetch{'\n'}
+              git pull{'\n\n'}
+              # View repository info{'\n'}
+              git remote -v{'\n'}
+              git branch -a{'\n'}
+              git status{'\n\n'}
+              # Create and switch branches{'\n'}
+              git checkout -b feature-branch{'\n\n'}
+              # Clean up{'\n'}
+              git remote prune origin{'\n'}
               git gc
-            </CodeBlock>
+            </div>
           </div>
         </div>
       </div>

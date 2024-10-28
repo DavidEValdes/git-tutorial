@@ -1,9 +1,5 @@
 import React from 'react';
 
-const CodeBlock = ({ children }) => (
-  <code className="block p-4 bg-gray-100 rounded font-mono text-sm">{children}</code>
-);
-
 const GettingStarted = () => (
   <div className="space-y-8">
     <div>
@@ -21,34 +17,32 @@ const GettingStarted = () => (
           <div className="space-y-4">
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="font-bold mb-2">Windows:</p>
-              <CodeBlock>
-                # Download Git from git-scm.com and run installer
-                # Or use Windows Package Manager
+              <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+                # Download Git from git-scm.com and run installer <br />
+                # Or use Windows Package Manager <br />
                 winget install Git.Git
-              </CodeBlock>
+              </div>
             </div>
 
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="font-bold mb-2">macOS:</p>
-              <CodeBlock>
-                # Using Homebrew
-                brew install git
-
-                # Or using MacPorts
+              <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+                # Using Homebrew <br />
+                brew install git <br /><br />
+                # Or using MacPorts <br />
                 sudo port install git
-              </CodeBlock>
+              </div>
             </div>
 
             <div className="bg-gray-50 p-4 rounded-lg">
               <p className="font-bold mb-2">Linux:</p>
-              <CodeBlock>
-                # Debian/Ubuntu
-                sudo apt-get update
-                sudo apt-get install git
-
-                # Fedora
+              <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+                # Debian/Ubuntu <br />
+                sudo apt-get update <br />
+                sudo apt-get install git <br /><br />
+                # Fedora <br />
                 sudo dnf install git
-              </CodeBlock>
+              </div>
             </div>
           </div>
         </div>
@@ -56,21 +50,18 @@ const GettingStarted = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Initial Configuration</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Set your identity
-              git config --global user.name "Your Name"
-              git config --global user.email "your.email@example.com"
-
-              # Set default branch name
-              git config --global init.defaultBranch main
-
-              # Set default editor (optional)
-              git config --global core.editor "code --wait"
-
-              # Configure line endings
-              git config --global core.autocrlf true  # Windows
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+              # Set your identity <br />
+              git config --global user.name "Your Name" <br />
+              git config --global user.email "your.email@example.com" <br /><br />
+              # Set default branch name <br />
+              git config --global init.defaultBranch main <br /><br />
+              # Set default editor (optional) <br />
+              git config --global core.editor "code --wait" <br /><br />
+              # Configure line endings <br />
+              git config --global core.autocrlf true  # Windows <br />
               git config --global core.autocrlf input # Mac/Linux
-            </CodeBlock>
+            </div>
           </div>
         </div>
       </div>
@@ -94,19 +85,16 @@ const GettingStarted = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">SSH Key Setup</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Generate SSH key
-              ssh-keygen -t ed25519 -C "your.email@example.com"
-
-              # Start SSH agent
-              eval "$(ssh-agent -s)"
-
-              # Add SSH key to agent
-              ssh-add ~/.ssh/id_ed25519
-
-              # Copy public key to clipboard (then add to GitHub)
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+              # Generate SSH key <br />
+              ssh-keygen -t ed25519 -C "your.email@example.com" <br /><br />
+              # Start SSH agent <br />
+              eval "$(ssh-agent -s)" <br /><br />
+              # Add SSH key to agent <br />
+              ssh-add ~/.ssh/id_ed25519 <br /><br />
+              # Copy public key to clipboard (then add to GitHub) <br />
               cat ~/.ssh/id_ed25519.pub
-            </CodeBlock>
+            </div>
           </div>
         </div>
       </div>
@@ -118,39 +106,33 @@ const GettingStarted = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Repository Commands</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Initialize repository
-              git init
-
-              # Clone repository
-              git clone [url]
-
-              # Add remote
-              git remote add origin [url]
-
-              # View remotes
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+              # Initialize repository <br />
+              git init <br /><br />
+              # Clone repository <br />
+              git clone [url] <br /><br />
+              # Add remote <br />
+              git remote add origin [url] <br /><br />
+              # View remotes <br />
               git remote -v
-            </CodeBlock>
+            </div>
           </div>
         </div>
 
         <div>
           <h3 className="text-xl font-semibold mb-3">Working with Changes</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Check status
-              git status
-
-              # Stage changes
-              git add [file]
-              git add .
-
-              # Commit changes
-              git commit -m "message"
-
-              # Push changes
+            <div className="bg-gray-100 p-4 rounded font-mono text-sm">
+              # Check status <br />
+              git status <br /><br />
+              # Stage changes <br />
+              git add [file] <br />
+              git add . <br /><br />
+              # Commit changes <br />
+              git commit -m "message" <br /><br />
+              # Push changes <br />
               git push origin main
-            </CodeBlock>
+            </div>
           </div>
         </div>
       </div>

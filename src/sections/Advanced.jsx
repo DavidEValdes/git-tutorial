@@ -1,9 +1,5 @@
 import React from 'react';
 
-const CodeBlock = ({ children }) => (
-  <code className="block p-4 bg-gray-100 rounded font-mono text-sm">{children}</code>
-);
-
 const Advanced = () => (
   <div className="space-y-8">
     <div>
@@ -19,36 +15,36 @@ const Advanced = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Basic Workflow Example</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              name: CI/CD Pipeline
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`name: CI/CD Pipeline
 
-              on:
-                push:
-                  branches: [ main ]
-                pull_request:
-                  branches: [ main ]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-              jobs:
-                build:
-                  runs-on: ubuntu-latest
-                  
-                  steps:
-                  - uses: actions/checkout@v3
-                  
-                  - name: Setup Node.js
-                    uses: actions/setup-node@v3
-                    with:
-                      node-version: '18'
-                      
-                  - name: Install dependencies
-                    run: npm ci
-                    
-                  - name: Run tests
-                    run: npm test
-                    
-                  - name: Build
-                    run: npm run build
-            </CodeBlock>
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run tests
+      run: npm test
+      
+    - name: Build
+      run: npm run build`}
+            </div>
           </div>
         </div>
 
@@ -99,26 +95,26 @@ const Advanced = () => (
           <h3 className="text-xl font-semibold mb-3">Code Scanning</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
             <p className="mb-4">Set up CodeQL analysis:</p>
-            <CodeBlock>
-              name: "CodeQL"
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`name: "CodeQL"
 
-              on:
-                push:
-                  branches: [ main ]
-                pull_request:
-                  branches: [ main ]
-                schedule:
-                  - cron: '0 0 * * 0'
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'
 
-              jobs:
-                analyze:
-                  runs-on: ubuntu-latest
-                  
-                  steps:
-                  - uses: actions/checkout@v3
-                  - uses: github/codeql-action/init@v2
-                  - uses: github/codeql-action/analyze@v2
-            </CodeBlock>
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    - uses: github/codeql-action/init@v2
+    - uses: github/codeql-action/analyze@v2`}
+            </div>
           </div>
         </div>
 
@@ -180,17 +176,17 @@ const Advanced = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Custom Domain Setup</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # CNAME file content
-              example.com
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`# CNAME file content
+example.com
 
-              # DNS Records
-              CNAME www - username.github.io
-              A @ - 185.199.108.153
-              A @ - 185.199.109.153
-              A @ - 185.199.110.153
-              A @ - 185.199.111.153
-            </CodeBlock>
+# DNS Records
+CNAME www - username.github.io
+A @ - 185.199.108.153
+A @ - 185.199.109.153
+A @ - 185.199.110.153
+A @ - 185.199.111.153`}
+            </div>
           </div>
         </div>
       </div>
@@ -202,40 +198,40 @@ const Advanced = () => (
         <div>
           <h3 className="text-xl font-semibold mb-3">Submodules</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Add submodule
-              git submodule add https://github.com/user/repo
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`# Add submodule
+git submodule add https://github.com/user/repo
 
-              # Initialize submodules
-              git submodule init
-              git submodule update
+# Initialize submodules
+git submodule init
+git submodule update
 
-              # Update all submodules
-              git submodule update --remote
+# Update all submodules
+git submodule update --remote
 
-              # Clone with submodules
-              git clone --recursive [url]
-            </CodeBlock>
+# Clone with submodules
+git clone --recursive [url]`}
+            </div>
           </div>
         </div>
 
         <div>
           <h3 className="text-xl font-semibold mb-3">Git LFS</h3>
           <div className="bg-gray-50 p-4 rounded-lg">
-            <CodeBlock>
-              # Install Git LFS
-              git lfs install
+            <div className="block p-4 bg-gray-100 rounded font-mono text-sm" style={{ whiteSpace: 'pre-wrap' }}>
+              {`# Install Git LFS
+git lfs install
 
-              # Track large files
-              git lfs track "*.psd"
-              git lfs track "*.zip"
+# Track large files
+git lfs track "*.psd"
+git lfs track "*.zip"
 
-              # Verify tracked files
-              git lfs ls-files
+# Verify tracked files
+git lfs ls-files
 
-              # Push including LFS objects
-              git push origin main
-            </CodeBlock>
+# Push including LFS objects
+git push origin main`}
+            </div>
           </div>
         </div>
 
