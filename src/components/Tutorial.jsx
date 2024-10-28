@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Book, GitBranch, GitCommit, GitMerge, Home, Plus, MessageSquare, Settings, Users, Search, HelpCircle, FileText } from 'lucide-react';
 import GettingStarted from '../sections/GettingStarted';
+import Repositories from '../sections/Repositories';
 
 const ContentBlock = ({ children }) => (
   <div className="p-6 bg-white rounded-lg shadow">{children}</div>
@@ -104,6 +105,8 @@ const Tutorial = () => {
         return renderHome();
       case 'gettingStarted':
         return <GettingStarted />;
+      case 'repositories':
+        return <Repositories />;
       default:
         return (
           <div className="space-y-6">
