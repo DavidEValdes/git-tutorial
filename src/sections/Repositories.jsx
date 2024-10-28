@@ -49,7 +49,7 @@ const Repositories = () => (
               git init
 
               # Add README file
-              echo "# My Project" > README.md
+              echo "# My Project"  README.md
 
               # Make first commit
               git add README.md
