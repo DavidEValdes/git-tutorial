@@ -3,7 +3,7 @@ import React from 'react';
 const GettingStarted = () => (
   <div className="space-y-8">
     <div>
-      <h1 className="text-4xl font-bold mb-6">Getting Started with GitHub</h1>
+      <h1 className="text-4xl font-bold mb-6">Getting Started</h1>
       <p className="text-xl text-gray-600">
         Learn the fundamentals of Git and GitHub to start your version control journey.
       </p>
